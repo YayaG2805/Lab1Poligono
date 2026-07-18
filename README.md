@@ -2,7 +2,7 @@
 
 Programa en Rust que rasteriza poligonos con el algoritmo scanline y regla par-impar. Genera `out.png` y `out.bmp`, y tambien puede mostrar el mismo framebuffer en una ventana con raylib-rs.
 
-![Resultado generado](out.png)
+![Resultado generado](docs/resultado.png)
 
 ## Objetivo
 
@@ -54,6 +54,8 @@ Las aristas horizontales se ignoran durante el calculo de intersecciones porque 
 |-- Cargo.lock
 |-- README.md
 |-- .gitignore
+|-- docs
+|   `-- resultado.png
 |-- out.png          # generado localmente
 |-- out.bmp          # generado localmente
 `-- src
@@ -70,7 +72,7 @@ Ejecuta:
 cargo run -- --export-only
 ```
 
-Esto sobrescribe `out.png` y `out.bmp` desde el mismo framebuffer usado por la ventana. Esos archivos quedan ignorados por Git para no subir salidas generadas, pero el README referencia `out.png` para que se vea localmente despues de regenerarla.
+Esto sobrescribe `out.png` y `out.bmp` desde el mismo framebuffer usado por la ventana. Esos archivos quedan ignorados por Git para no subir salidas generadas. La imagen estable del README esta en `docs/resultado.png`.
 
 ## Archivos no versionados
 
@@ -84,7 +86,8 @@ git rm -r --cached target build
 
 - [x] Repositorio organizado.
 - [x] `out.bmp` generado localmente.
-- [x] `out.png` generado localmente y referenciado en el README.
+- [x] `out.png` generado localmente.
+- [x] Imagen visible en el README mediante `docs/resultado.png`.
 - [x] Sin `build/`, `target/` ni binarios versionados.
 - [x] Poligono 1 relleno y con contorno.
 - [x] Poligono 2 relleno y con contorno.
