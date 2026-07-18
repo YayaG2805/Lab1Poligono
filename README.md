@@ -72,7 +72,7 @@ Ejecuta:
 cargo run -- --export-only
 ```
 
-Esto sobrescribe `out.png` y `out.bmp` desde el mismo framebuffer usado por la ventana. Esos archivos quedan ignorados por Git para no subir salidas generadas. La imagen estable del README esta en `docs/resultado.png`.
+Esto sobrescribe `out.png` y `out.bmp` desde el mismo framebuffer usado por la ventana. `out.bmp` se deja versionado para cumplir la rubrica; `out.png` queda ignorado como salida generada. La imagen estable del README esta en `docs/resultado.png`.
 
 ## Archivos no versionados
 
@@ -85,7 +85,7 @@ git rm -r --cached target build
 ## Lista de verificacion
 
 - [x] Repositorio organizado.
-- [x] `out.bmp` generado localmente.
+- [x] `out.bmp` generado y versionado para la entrega.
 - [x] `out.png` generado localmente.
 - [x] Imagen visible en el README mediante `docs/resultado.png`.
 - [x] Sin `build/`, `target/` ni binarios versionados.
